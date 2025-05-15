@@ -1,0 +1,35 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+using namespace std;
+
+bool isPalindrome(int n){
+    
+    int reverse = 0;
+    
+    int temp = abs(n);
+    
+    while(temp!=0){
+        
+        reverse = (reverse*10) + (temp%10);
+        temp = temp/10;
+    }
+    
+    return (reverse == abs(n));
+}
+
+int main() {
+    
+    int n = 12321;
+    
+    if(isPalindrome(n) == 1){
+        
+        cout<<"Yes";
+    }
+    
+    else{
+        cout<<"No";
+    }
+
+    return 0;
+}
